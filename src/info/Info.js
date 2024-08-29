@@ -45,10 +45,12 @@ export const info = {
             label: 'github'
         },
         {
-            link: "sanjeevvarmacode@gmail.com",
-            icon: 'fa fa-email',
+            link: "https://mail.google.com/mail/?view=cm&fs=1&to=sanjeevvarmacode@gmail.com",
+            icon: 'fa fa-envelope',
             label: 'email'
         },
+        
+        
         {
             link: "https://www.linkedin.com/in/sanjeev-varma7/",
             icon: "fa fa-linkedin",
