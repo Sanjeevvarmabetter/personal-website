@@ -103,13 +103,13 @@ export const info = {
         },
         {
             title: "Blog Application",
-            live: "https://paytonpierce.dev",
+            live: "",
             source: "https://github.com/Sanjeevvarmabetter/website_sanjeev",
             image: mock3
         },
         {
             title: "Local Music Player",
-            live: "https://paytonpierce.dev",
+            live: "",
             source: "https://github.com/Sanjeevvarmabetter/SANJEEV-S-COOL-MUSIC-PLAYER",
             image: mock4
         },
