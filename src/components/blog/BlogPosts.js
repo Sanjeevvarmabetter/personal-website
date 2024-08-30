@@ -8,7 +8,7 @@ function BlogPosts() {
     const [loginInfo, setLoginInfo] = useState({ username: '', password: '' });
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/blogposts')
+        axios.get('https://blog-api-rho-two.vercel.app/api/blog')
             .then(response => setPosts(response.data))
             .catch(error => console.error('There was an error ', error));
     }, []);
@@ -36,7 +36,7 @@ function BlogPosts() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:5000/api/blogposts', newPost)
+        axios.post('https://blog-api-rho-two.vercel.app/api/blogposts', newPost)
             .then(response => {
                 setPosts([...posts, response.data]);
                 setNewPost({ title: '', content: '', tags: '' });
