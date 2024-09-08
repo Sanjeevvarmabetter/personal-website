@@ -10,6 +10,9 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 export default function MultiPageRoutes() {
+
+
+
     return (
         <Routes>
             <Route exact path={'/'} element={<Home />} />
@@ -17,7 +20,7 @@ export default function MultiPageRoutes() {
             <Route exact path={'/portfolio'} element={<Portfolio />} />
             <Route exact path={'/createpost'} element={<CreatePostPage />} />
             <Route exact path={'/blog'} element={<BlogPosts />} />
-            <Route exact path={'/blogPost'} element={<BlogPostDetail /> } />
+            <Route exact path={'/blogposts/:postId'} element={<BlogPostDetail /> } />
             <Route exact path={'/login'} element={<LoginPage />} />
 
         </Routes>

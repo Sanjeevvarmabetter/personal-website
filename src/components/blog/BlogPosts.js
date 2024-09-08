@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-function BlogPosts() {
+function BlogPosts({ isAuthenticated }) {
     const [posts, setPosts] = useState([]);
     const navigate = useNavigate();
 
@@ -20,13 +20,29 @@ function BlogPosts() {
         navigate(`/blogposts/${postId}`);
     };
 
+    const handleCreatePost = () => {
+        if (isAuthenticated) {
+            navigate('/createpost');
+        } else {
+            navigate('/login');
+        }
+    };
+
     return (
         <div>
             <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <h1>Blog Posts</h1>
-                {/* <button onClick={handleLogin}>
+                <button onClick={handleCreatePost} style={{
+                    backgroundColor: '#007BFF',
+                    color: 'white',
+                    border: 'none',
+                    padding: '10px 20px',
+                    borderRadius: '5px',
+                    cursor: 'pointer',
+                    fontSize: '16px'
+                }}>
                     {isAuthenticated ? 'Create Post' : 'Login'}
-                </button> */}
+                </button>
             </header>
             <ul>
                 {posts.map(post => (
