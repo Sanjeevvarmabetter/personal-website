@@ -19,6 +19,11 @@ const links = [
         active: 'about'
     },
     {
+        name: 'Experience',
+        to: 'experience',
+        active: 'Experience'
+    },
+    {
         name: info.initials,
         type: 'initials',
         to: '',
@@ -34,6 +39,7 @@ const links = [
         to: 'blog',
         active: 'blog'
     }
+    
 ]
 
 
