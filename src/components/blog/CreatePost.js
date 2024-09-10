@@ -37,30 +37,12 @@ function CreatePostPage({ onPostCreated }) {
                     value={newPost.title}
                     onChange={handleInputChange}
                 />
-                
-                {/* CKEditor component */}
-                <CKEditor
-                    editor={ClassicEditor}
-                    data={newPost.content}
-                    onChange={handleContentChange}
-                    config={{
-                        toolbar: ['heading', '|', 'bold', 'italic', 'fontColor', 'fontBackgroundColor', '|', 'undo', 'redo'],
-                        fontColor: {
-                            colors: [
-                                {
-                                    color: '#ffffff',
-                                    label: 'White'
-                                },
-                                {
-                                    color: '#000000',
-                                    label: 'Black'
-                                },
-                                // Add other colors as needed
-                            ]
-                        }
-                    }}
-                />
-                
+                <textarea
+                    name="content"
+                    placeholder="Content"
+                    value={newPost.content}
+                    onChange={handleInputChange}
+                ></textarea>
                 <input
                     type="text"
                     name="tags"

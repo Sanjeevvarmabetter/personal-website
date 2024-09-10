@@ -5,13 +5,15 @@ function LoginPage({ onLogin }) {
     const [loginInfo, setLoginInfo] = useState({ username: '', password: '' });
     const navigate = useNavigate();
 
+
+
     const handleLoginSubmit = (event) => {
         event.preventDefault();
         
         const { username, password } = loginInfo;
         console.log(`Username: ${username}, Password: ${password}`);
         
-        if (username === 'admin' && password === process.env.REACT_APP_LOGIN_PASS) {
+        if (username === 'admin' && password === "admin") {
             onLogin(true);
             navigate('/createpost');
         } else {
