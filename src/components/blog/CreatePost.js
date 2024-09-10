@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { CKEditor } from '@ckeditor/ckeditor5-react';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
 
 function CreatePostPage({ onPostCreated }) {
     const [newPost, setNewPost] = useState({ title: '', content: '', tags: '' });
@@ -11,10 +10,6 @@ function CreatePostPage({ onPostCreated }) {
         setNewPost({ ...newPost, [name]: value });
     };
 
-    const handleContentChange = (event, editor) => {
-        const data = editor.getData();
-        setNewPost({ ...newPost, content: data });
-    };
 
     const handleSubmit = (event) => {
         event.preventDefault();
