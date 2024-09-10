@@ -9,6 +9,8 @@ const Donate = () => {
 
 
             <h1> Donate money to reduce hunger in India</h1>
+
+            <h2> This is not a scam cyber society</h2>
             <img src={path_qr} alt="qr code" style={{ width: '300px', height: '300px' }}/> 
 
 
