@@ -11,7 +11,7 @@ function LoginPage({ onLogin }) {
         const { username, password } = loginInfo;
         console.log(`Username: ${username}, Password: ${password}`);
         
-        if (username === 'admin' && password === 'admin') {
+        if (username === 'admin' && password === process.env.REACT_APP_LOGIN_PASS) {
             onLogin(true);
             navigate('/createpost');
         } else {
