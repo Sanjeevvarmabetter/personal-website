@@ -88,7 +88,16 @@ export const info = {
 // Same as above, change the emojis to match / relate to your hobbies or interests.
 // You can also remove the emojis if you'd like, I just think they look cute :P
     ],
-    portfolio: [ // This is where your portfolio projects will be detailed
+    portfolio: [ 
+
+        {
+            title: "EcoCoal",
+            live: "https://ecocoal.vercel.app", 
+            source: "https://github.com/Sanjeevvarmabetter/Securitycamera/", 
+            image: mock5
+        },
+
+
         {
             title: "Decentralized Security Camera",
             live: "", 
@@ -112,6 +121,13 @@ export const info = {
             live: "",
             source: "https://github.com/Sanjeevvarmabetter/SANJEEV-S-COOL-MUSIC-PLAYER",
             image: mock4
+
+
         },
+
+  
+
     ]
 }
+
+
